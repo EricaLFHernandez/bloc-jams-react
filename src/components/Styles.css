@@ -1,0 +1,186 @@
+nav {
+    position: fixed;
+    height: 2rem;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+.navLinks {
+    padding: 0 2rem 0 2rem;
+    text-decoration: none;
+    color:  #4C4CFF;
+}
+
+.navLinks:hover {
+    color: #9999ff;
+}
+
+button {
+    outline-style: none;
+    width: 2rem;
+}
+
+.landing {
+    background-image: url("/assets/images/css_images/party.jpg");
+    background-color: #808080;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.title {
+    margin-top: 0;
+    padding-top: 2rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFFFFF;
+    font-family: sans-serif;
+    font-size: 6rem;
+}
+
+.hero-title {
+    color: #FFFFFF;
+    font-size: 4rem;
+}
+
+.point {
+    color: #FFFFFF;
+    padding: 1rem;
+    font-size: 1.5rem;
+    animation-delay: .5s;
+    -webkit-animation: bounce-in 1s ease 2s 1 normal ;
+    animation: bounce-in 1s ease 2s 1 normal ;
+}
+
+.logo {
+    content:url("/assets/images/css_images/skyline_logo.jpg");
+    display: block;
+}
+.library .logo {
+    margin: auto;
+    padding: 2rem 0 3rem 0;
+    width: 50%
+}
+
+.covers {
+    display: inline-block;
+    width: 50%;
+    margin: auto;
+}
+
+.album {
+    width: 80%;
+    position: relative;
+    margin: auto;
+}
+
+.album-cover {
+    width: 100%;
+}
+
+.album-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    padding: 10px 20px 0px 20px;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.album-title-top {
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.album-title-line {
+    padding-bottom: 10px;
+}
+
+.album .logo {
+    float: left;
+    position: fixed;
+    margin: 1rem 2rem 0 0;
+    width: 30rem;
+}
+
+#vertical-line {
+    border-left: .2rem solid #4C4CFF;
+    height: 95vh;
+    position: fixed;
+    margin: 1.5rem, 0, 1.5rem, 0;
+    left: 50%;
+    top: 1.5rem;
+    box-sizing: border-box;
+
+}
+
+#song-list {
+    margin-top: 20rem;
+    width: 30rem;
+    clear: left;
+    position: fixed;
+}
+
+#album-cover-art {
+    margin: 1rem;
+    margin-top: 3rem;
+    float: right;
+    width: 30rem;
+}
+
+.album-details {
+    float: right;
+    clear: right;
+    text-align: center;
+    width: 30rem;
+}
+
+.player-bar {
+    float: right;
+    clear: right;
+    width: 30rem;
+    margin-top: 2rem;
+}
+
+@-webkit-keyframes bounce-in {
+  0%{
+	opacity: 0;
+	-webkit-transform: scale(.3);
+	transform: scale(.3);
+  }
+  50%{
+	opacity: 1;
+	-webkit-transform: scale(1.0);
+	transform: scale(1.0);
+  }
+  70%{
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+  }
+  100%{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+  }
+}
+
+@keyframes bounce-in {
+  0%{
+	opacity: 0;
+	transform: scale(.3);
+  }
+  50%{
+	opacity: 1;
+	transform: scale(1.0);
+  }
+  70%{
+	transform: scale(0.9);
+  }
+  100%{
+	transform: scale(1);
+  }
+}

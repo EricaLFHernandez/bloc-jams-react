@@ -16,7 +16,8 @@ class Album extends Component {
             currentTime: 0,
             duration: album.songs[0].duration,
             volume: 1,
-            isPlaying: false
+            isPlaying: false,
+            isHovering: false
         };
         // dynamically create an <audio> element
         this.audioElement = document.createElement('audio');
@@ -114,7 +115,11 @@ class Album extends Component {
 
     render() {
         return (
-            <section className="album">
+            <section className='album'>
+                <div className='logo'>
+                </div>
+                <div id='vertical-line'>
+                </div>
                 <section id="album-info">
                     <img id="album-cover-art" src={this.state.album.albumCover} alt="album art"/>
                     <div className="album-details">
@@ -131,12 +136,16 @@ class Album extends Component {
                     </colgroup>
                     <tbody>
                         {this.state.album.songs.map ( (song, index) =>
-                            <tr className={song} key={index} onClick={() => this.handleSongClick(song)}>
+                            <tr className={song} key={index} onClick={() => this.handleSongClick(song)}
+                                onMouseEnter={() => this.setState({isHovering: index+1})}
+                                onMouseLeave={() => this.setState({isHovering: false})}>
                                 <td className="song-actions">
-                                    <button>
-                                        <span className="song-number">{index+1}</span>
-                                        <span className="ion-play"></span>
-                                        <span className="ion-pause"></span>
+                                    <button id="song-buttons">
+                                        {(this.state.currentSong.title === song.title) ?
+                                            <span className={this.state.isPlaying ? 'ion-pause' : 'ion-play'}></span> :
+                                            (this.state.isHovering === index+1) ?
+                                            <span className='ion-play'></span> : <span className='song-number'>{index+1}</span>
+                                        }
                                     </button>
                                 </td>
                                 <td className="song-title">{song.title}</td>
